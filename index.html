@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <title>Portafolio</title>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="https://www.linkedin.com/in/leonardo-iglesias-analista-qa/" target="_blank">Leonardo</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/hero.png" alt="perfil">
+            </div>
+            <h1>LEO IGLESIAS</h1>
+            <h2>Quality Assurance</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com/profile.php?id=100067962864109&locale=es_LA" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/channel/UCWhlHiMqPXObNtct2csuRGQ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://github.com/Leo-iglesias" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/leonardo-iglesias-analista-qa/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/leo_churches?igsh=YnpwZGI3bmZhb2th&utm_source=qr" target="_blank"><i class="fa-solid fa-camera-retro"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Leonardo Iglesias</span> especialista QA, apasionado por la educación, la Web3 y la inteligencia artifial.
+                <br>Como especialista en calidad de software (QA), realizo planes y ejecuciones de pruebas, gestiono equipos pequeños y aseguro la calidad del desarrollo (web y mobile) desde la etapa de diseño hasta la puesta en producción y control de calidad (QC).<br>
+                <br>Además soy tutor QA de de jóvenes que están ingresando al mundo del aseguramiento de la calidad.<br>
+                <br>"La vida es eso que sucede mientras estás viajando."</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            18/02/1995
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            261-6059525
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            leonardoiglesias74@gmail.com
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            Mendoza, Argentina
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>QA Specialist</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-brands fa-apple"></i>
+                            <span>MAC OS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>TREKKING</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LIBROS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-car"></i>
+                            <span>AUTOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>FOTOS</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <button id="downloadCV">
+                Descargar CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
+            <script>
+                document.getElementById('downloadCV').addEventListener('click', function() {
+                    window.open('img/CV QA Leonardo Iglesias.pdf', '_blank');
+                });
+            </script>
+         </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <span>Selenium</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Cypress</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>89%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Postman</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>MySQL</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>81%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>CI/CD</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>55%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Proactividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>50%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Ingles</h4>
+                        <span class="casa">Amicana</span>
+                        <span class="fecha">2024 - Actualidad</span>
+                        <p>Actualmente, estoy cursando inglés en el Instituto de Amicana. Este programa me ha brindado la oportunidad de mejorar mis habilidades lingüísticas en un entorno de aprendizaje dinámico. He desarrollado competencias en comprensión auditiva, expresión oral, lectura y escritura en inglés.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Economía y Gestión</h4>
+                        <span class="casa">Colegio Nacional Agustín Álvarez</span>
+                        <span class="fecha">2008 - 2013</span>
+                        <p>donde cursé la orientación en Economía y Gestión de las Organizaciones. Esta formación me permitió adquirir conocimientos sólidos en áreas clave como administración, contabilidad y recursos humanos.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Administración de Empresas</h4>
+                        <span class="casa">Universidad de Nacional de Cuyo</span>
+                        <span class="fecha">2014 - 2015</span>
+                        <p>Curse durante un año la carrera de licenciatura en administración de empresas, luego continuando con una tecnicatura en el año 2016 - 2017</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>QA Analyst</h4>
+                        <span class="casa">SOKO SOLUTIONS</span>
+                        <span class="fecha">2023 - 2024</span>
+                        <p>
+                            <li>🔄 Metodología de Trabajo Scrum</li>
+                            <li>🖥️ API Testing con Postman.</li>
+                            <li>🐞 Reporte y seguimiento de bugs.</li>
+                            <li>🗂️ Creación de Documentación técnica.</li>
+                            <li>🐞 Informes de Bugs Funcionales.</li>
+                            <li>🗃️ Migración de Datos entre plataformas.</li>
+                            <li>🖥️ Pruebas de Aceptación (UAT).</li>
+                        </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>QA Analyst</h4>
+                        <span class="casa">CONSENSUS GROUP</span>
+                        <span class="fecha">2023 - 2023</span>
+                        <p>
+                            <li>🔄 Metodología de Trabajo Scrum.</li>
+                            <li>📊 Excel - Macros.</li>
+                            <li>🎯 Ejecución de Casos de Pruebas.</li>
+                            <li>🔄 Regresión de Forma Manual.</li>
+                            <li>📦 Pruebas de Caja Negra.</li>
+                            <li>📝 Documentación y reportes de pruebas.</li>
+                            <li>🔌 Pruebas Manuales para API.</li>
+                        </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>QA Analyst</h4>
+                        <span class="casa">Upex</span>
+                        <span class="fecha">2022 - 2023</span>
+                        <p>
+                            <li>🖥️ Pruebas Funcionales</li>
+                            <li>🛒 Pruebas de Aceptación de (UAT)</li>
+                            <li>🌍 Pruebas de Localización</li>
+                            <li>🔌 Pruebas de API con Postman</li>
+                            <li>💾 Consultas SQL con "MySQL"</li>
+                            <li>✔️ Análisis de Requerimientos.</li>
+                            <li>📝 Diseños y ejecuciones de Test.</li>
+                            <li>📊 Particiones Equivalentes.</li>
+                        </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTAFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto" onclick="window.open('https://www.bridgestone.com.ar/', '_blank');">
+                    <img src="img/p1.jpg" alt="Proyecto Bridgestone">
+                    <div class="overlay">
+                        <h3>Bridgestone</h3>
+                        <p>Proyecto</p>
+                    </div>
+                </div>
+                <div class="proyecto" onclick="window.open('https://englishservices.com.ar/', '_blank');">
+                    <img src="img/p2.jpg" alt="Proyecto englishservices">
+                    <div class="overlay">
+                        <h3>English Services</h3>
+                        <p>Proyecto</p>
+                    </div>
+                </div>
+                <div class="proyecto" onclick="window.open('https://www.dafiti.com.ar/', '_blank');">
+                    <img src="img/p3.jpg" alt="e-commerce">
+                    <div class="overlay">
+                        <h3>E-Commerce</h3>
+                        <p>Proyecto</p>
+                    </div>
+                </div>
+                <div class="proyecto" onclick="window.open('https://github.com/Leo-iglesias', '_blank');">
+                    <img src="img/p4.jpg" alt="github">
+                    <div class="overlay">
+                        <h3>Automation y SQL</h3>
+                        <p>Proyectos</p>
+                    </div>
+                </div>
+                <div class="proyecto" onclick="window.open('https://orange-decade-34a.notion.site/Fundaci-n-Beatriz-Ramseyer-d91ed20b2fab487bba357f104a890ce8', '_blank');">
+                    <img src="img/p5.jpg" alt="proyectofundacion">
+                    <div class="overlay">
+                        <h3>Fundación Ramseyer</h3>
+                        <p>Proyecto</p>
+                    </div>
+                </div>
+                <div class="proyecto" onclick="window.open('https://orange-decade-34a.notion.site/E-Commerce-360-Software-Testing-14405ba4fbc242a5a4cfa0320c06801d', '_blank');">
+                    <img src="img/p6.jpg" alt="daffiti">
+                    <div class="overlay">
+                        <h3>E-Commerce</h3>
+                        <p>Proyecto</p>
+                    </div>
+                </div>
+                <div class="proyecto" onclick="window.open('https://youtube.com/@pandorasoft?si=d-n1SyKhMcACwRI1', '_blank');">
+                    <img src="img/p7.jpg" alt="canalyoutube">
+                    <div class="overlay">
+                        <h3>YouTube</h3>
+                        <p>Mi Canal</p>
+                    </div>
+                </div>
+                <div class="proyecto" onclick="window.open('https://semillero.tech/', '_blank');">
+                    <img src="img/p8.jpg" alt="semillero">
+                    <div class="overlay">
+                        <h3>Voluntariado</h3>
+                        <p>Semillero Latam</p>
+                    </div>
+                </div>
+                <div class="proyecto" onclick="window.open('https://linktr.ee/upex', '_blank');">
+                    <img src="img/p9.jpg" alt="upex">
+                    <div class="overlay">
+                        <h3>Comunidad</h3>
+                        <p>Upex Galaxy</p>
+                    </div>
+                </div>
+                <div class="proyecto" onclick="window.open('https://drive.google.com/drive/folders/17LhjULlgdAl9AWldervNdxVh9SbS-2Ix?usp=sharing', '_blank');">
+                    <img src="img/p10.jpg" alt="certificados">
+                    <div class="overlay">
+                        <h3>Certificaciones</h3>
+                        <p>Cursos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" placeholder="Tú Nombre">
+                    <input type="text" placeholder="Número telefónico">
+                    <input type="text" placeholder="Dirección de correo">
+                    <input type="text" placeholder="Tema">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button>
+                        Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="img/ubicacion.png" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Guaymallen, Mendoza
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Llámame:261 -6059525 
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: leonardoiglesias74@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <div class="redes">
+                <a href="https://www.facebook.com/profile.php?id=100067962864109&locale=es_LA" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/channel/UCWhlHiMqPXObNtct2csuRGQ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://github.com/Leo-iglesias" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/leonardo-iglesias-analista-qa/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/leo_churches?igsh=YnpwZGI3bmZhb2th&utm_source=qr" target="_blank"><i class="fa-solid fa-camera-retro"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
